@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Booking</title>
     <h1>Travel Plans </h1>
+    <a href="./index.html">Back to Home</a>
   </head>
   <body>
     <form class="booking-form" action="index.html" method="post">
@@ -37,6 +38,7 @@
       <label for="venue">Venue</label>
       <input type="text" name="venue" value="" placeholder="Venue">
       <br>
+
       <!-- Need to compensate for Mission, Travel days & leave days -->
       <br>
       <label for="date-start">Date Start</label>
@@ -50,6 +52,7 @@
       <textarea name="justification" rows="8" cols="80"></textarea>
       <br>
 
+      <!-- On checked, create additional input with name & est travel cost  -->
       <br>
       <label for="add-costs-option">Additional costs?</label>
       <input type="radio" name="add-costs-option">
@@ -57,7 +60,7 @@
 
       <br>
       <label for="project-name">Project:</label>
-      <input type="text" name="project-name" value="" placeholder="Project"> 
+      <input type="text" name="project-name" value="" placeholder="Project">
       <br>
 
       <br>
@@ -65,8 +68,10 @@
       <input type="text" name="department" value="" placeholder="Department">
       <br>
 
-
-
+      <br>
+      <input type="submit" name="submit">
+      <button type="button" name="save">Save</button>
+      <button type="button" name="delete">Delete</button>
     </form>
   </body>
 </html>
