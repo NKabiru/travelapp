@@ -2,12 +2,124 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css" media="screen,projection">
+
     <title>Home</title>
-    <h1>Travel Booking</h1>
-    <a href="./booking.html">Travel Plan</a>
-    <a href="./register.html">Register</a>
+
   </head>
   <body>
-    <img src="img/resort.jpg" alt="Resort">
+    <!-- Navigation bar -->
+    <nav>
+      <div class="nav-wrapper purple">
+        <a href="#" class="brand-logo">TravelBook</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul class="right hide-on-med-and-down">
+          <li><a href="booking.html">Travel Plan</a></li>
+          <li><a href="reporting.html">Reports</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Status</a></li>
+        </ul>
+
+        <!-- Mobile navigation bar -->
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="booking.html">Travel Plan</a></li>
+          <li><a href="reporting.html">Reports</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Status</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div id="banner" class="parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br><br>
+          <div class="row center">
+            <h2 class="header center green-text text-lighten-2">Welcome</h2>
+            <h5 class="header col s12 white-text">Make all your travel bookings here!</h5>
+          </div>
+          <br><br>
+          <div class="row center">
+            <a href="#" id="register-button" class="btn-large waves-effect waves-light green">Register</a>
+          </div>
+        </div>
+
+        <div class="parallax"><img src="img/meeting.jpg" alt="meeting jpg"></div>
+      </div>
+    </div>
+
+    <!-- Section with information -->
+    <div class="container">
+      <div class="section">
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center green-text"><i class="medium material-icons">done_all</i></h2>
+              <h5 class="center">Hassle free booking</h5>
+              <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center green-text"><i class="medium material-icons">explore</i></h2>
+              <h5 class="center">Destinations</h5>
+              <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center green-text"><i class="medium material-icons">fingerprint</i></h2>
+              <h5 class="center">Security Guaranteed</h5>
+              <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer green">
+
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Contact Us</h5>
+            <p class="grey-text text-lighten-4">Have any issues? Feel free to contact us!</p>
+          </div>
+
+          <div class="col l6 s12">
+            <ul class="grey-text text-lighten-4">
+              <li>Number:&nbsp;+254-000-000-000</li>
+              <li>Email:&nbsp;<a href="mailto:travelbook@sample.com" class="green-text text-lighten-4">travelbook@sample.com</a></li>
+              <br>
+              <li>Building Hse,<br>Sample Street St.,<br>Nairobi County,<br>Kenya.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container">
+          Made by &nbsp; <a href="#" class="white-text">Njenga Kabiru</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/page.js"></script>
+
   </body>
 </html>

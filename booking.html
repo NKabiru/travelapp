@@ -2,76 +2,158 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css" media="screen,projection">
+
     <title>Booking</title>
-    <h1>Travel Plans </h1>
-    <a href="./index.html">Back to Home</a>
   </head>
   <body>
-    <form class="booking-form" action="index.html" method="post">
-      <h3>Form</h3>
-      <label for="fname">First Name:</label>
-      <input type="text" name="fname" value="" placeholder="First Name">
-      <label for="sname">Surname: </label>
-      <input type="text" name="sname" value="" placeholder="Surname"><br>
+    <!-- Navigation bar -->
+    <nav>
+      <div class="nav-wrapper purple">
+        <a href="index.html" class="brand-logo">TravelBook</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 
-      <label for="grade">Grade:</label>
-      <select class="grade" name="grade">
-        <option value="P">P</option>
-        <option value="D">D</option>
-        <option value="G">G</option>
-        <option value="TC">TC</option>
-        <option value="S">S</option>
-        <option value="PIA">PIA</option>
-        <option value="LT">LT</option>
-        <option value="NO">NO</option>
-        <option value="FS">FS</option>
-        <option value="SG">SG</option>
-        <option value="DSG">DSG</option>
-        <option value="USG">USG</option>
-        <option value="ASG">ASG</option>
-      </select>
-      <br>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="booking.html">Travel Plan</a></li>
+          <li><a href="reporting.html">Reports</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Status</a></li>
+        </ul>
 
-      <br>
-      <label for="meeting">Meeting/Institution</label>
-      <input type="text" name="meeting" value="" placeholder="Meeting/Institution"><br>
-      <label for="venue">Venue</label>
-      <input type="text" name="venue" value="" placeholder="Venue">
-      <br>
+        <!-- Mobile navigation bar -->
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="booking.html">Travel Plan</a></li>
+          <li><a href="reporting.html">Reports</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Status</a></li>
+        </ul>
 
-      <!-- Need to compensate for Mission, Travel days & leave days -->
-      <br>
-      <label for="date-start">Date Start</label>
-      <input type="text" name="date-start" value="" placeholder="Date Start">
-      <label for="date-end">Date End</label>
-      <input type="text" name="date-end" value="" placeholder="Date End">
-      <br>
+      </div>
+    </nav>
 
-      <br>
-      <label for="justification">Justification:</label>
-      <textarea name="justification" rows="8" cols="80"></textarea>
-      <br>
+    <!-- Form -->
+    <div class="row">
+      <div class="col s12 l12">
+        <div class="card-panel white">
+          <form class="booking-form" action="#" method="post">
+            <h5 class="header purple-text text-lighten-3">Create your Travel Plan</h5>
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" name="fname" class="validate">
+                <label for="fname">First Name</label>
+              </div>
 
-      <!-- On checked, create additional input with name & est travel cost  -->
-      <br>
-      <label for="add-costs-option">Additional costs?</label>
-      <input type="radio" name="add-costs-option">
-      <br>
+              <div class="input-field col s6">
+                <input type="text" name="sname" class="validate"><br>
+                <label for="sname">Last Name</label>
+              </div>
+            </div>
 
-      <br>
-      <label for="project-name">Project:</label>
-      <input type="text" name="project-name" value="" placeholder="Project">
-      <br>
+            <!-- TODO: Add optgroups to separate the working grades -->
+            <div class="row">
+              <div class="input-field col s12">
+                <select class="grade" name="grade">
+                  <option value="" disabled selected>Choose your grade</option>
+                  <option value="P">P</option>
+                  <option value="D">D</option>
+                  <option value="G">G</option>
+                  <option value="TC">TC</option>
+                  <option value="S">S</option>
+                  <option value="PIA">PIA</option>
+                  <option value="LT">LT</option>
+                  <option value="NO">NO</option>
+                  <option value="FS">FS</option>
+                  <option value="SG">SG</option>
+                  <option value="DSG">DSG</option>
+                  <option value="USG">USG</option>
+                  <option value="ASG">ASG</option>
+                </select>
+                <label for="grade">Grade</label>
+              </div>
+            </div>
 
-      <br>
-      <label for="department">Department:</label>
-      <input type="text" name="department" value="" placeholder="Department">
-      <br>
 
-      <br>
-      <input type="submit" name="submit">
-      <button type="button" name="save">Save</button>
-      <button type="button" name="delete">Delete</button>
-    </form>
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" name="meeting">
+                <label for="meeting">Meeting/Institution</label>
+              </div>
+
+              <div class="input-field col s6">
+                <label for="venue">Venue</label>
+                <input type="text" name="venue">
+              </div>
+            </div>
+
+            <br>
+
+            <!-- Need to compensate for Mission, Travel days & leave days -->
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="date" name="date-start" class="datepicker">
+                <label for="date-start">Date Start</label>
+              </div>
+
+              <div class="input-field col s6">
+                <input type="date" name="date-end" class="datepicker">
+                <label for="date-end">Date End</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="justification" class="materialize-textarea"></textarea>
+                <label for="justification">Justification:</label>
+              </div>
+            </div>
+
+            <!--TODO: Fix multiple selection of radio buttons  -->
+            <div class="row">
+              <div class="input-field col s12">
+                <p>Additional costs?</p>
+                <p>
+                  <input class="with-gap" group="cost-group" name="cost-option" type="radio" id="add-costs-option">
+                  <label for="add-costs-option">Yes</label>
+
+                  <input class="with-gap" group="cost-group" name="cost-option" type="radio" id="no-costs-option">
+                  <label for="no-costs-option">No</label>
+                </p>
+              </div>
+            </div>
+            <!-- On checked, create additional input with name & est travel cost  -->
+
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" name="project-name">
+                <label for="project-name">Project</label>
+              </div>
+
+              <div class="input-field col s6">
+                <input type="text" name="department">
+                <label for="department">Department</label>
+              </div>
+            </div>
+
+
+            <button class="btn waves-effect waves-light green" type="submit" name="save">Submit</button>
+            <button class="btn waves-effect waves-light green-text white" type="button" name="save">Save</button>
+            <span class="right"><button class="btn waves-effect waves-light green-text white" type="button" name="delete">Delete</button></span>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="js\jquery-3.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/page.js"></script>
+
   </body>
 </html>
