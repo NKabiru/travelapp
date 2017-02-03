@@ -19,7 +19,7 @@
 
         <ul class="right hide-on-med-and-down">
           <li><a href="booking.html">Travel Plan</a></li>
-          <li><a href="reporting.html">Reports</a></li>
+          <li><a href="reporting.html">Reports<span class="new badge green">3</span></a></li>
           <li><a href="register.html">Register</a></li>
           <li><a href="dashboard.html">Status</a></li>
         </ul>
@@ -27,7 +27,7 @@
         <!-- Mobile navigation bar -->
         <ul id="nav-mobile" class="side-nav">
           <li><a href="booking.html">Travel Plan</a></li>
-          <li><a href="reporting.html">Reports</a></li>
+          <li><a href="reporting.html">Reports<span class="new badge green">3</span></a></li>
           <li><a href="register.html">Register</a></li>
           <li><a href="dashboard.html">Status</a></li>
         </ul>
@@ -53,24 +53,33 @@
               </div>
             </div>
 
-            <!-- TODO: Add optgroups to separate the working grades -->
             <div class="row">
               <div class="input-field col s12">
-                <select class="grade" name="grade">
+                <select class="grade" name="grade" multiple>
                   <option value="" disabled selected>Choose your grade</option>
-                  <option value="P">P</option>
-                  <option value="D">D</option>
-                  <option value="G">G</option>
-                  <option value="TC">TC</option>
-                  <option value="S">S</option>
-                  <option value="PIA">PIA</option>
-                  <option value="LT">LT</option>
-                  <option value="NO">NO</option>
-                  <option value="FS">FS</option>
-                  <option value="SG">SG</option>
-                  <option value="DSG">DSG</option>
-                  <option value="USG">USG</option>
-                  <option value="ASG">ASG</option>
+                  <optgroup label="Professionals">
+                    <option value="P">P</option>
+                    <option value="D">D</option>
+                  </optgroup>
+                  <optgroup label="General Service">
+                    <option value="G">G</option>
+                    <option value="TC">TC</option>
+                    <option value="S">S</option>
+                    <option value="PIA">PIA</option>
+                    <option value="LT">LT</option>
+                  </optgroup>
+                  <optgroup label="National Professional Officers">
+                    <option value="NO">NO</option>
+                  </optgroup>
+                  <optgroup label="Field Service">
+                    <option value="FS">FS</option>
+                  </optgroup>
+                  <optgroup label="Senior Appointments">
+                    <option value="SG">SG</option>
+                    <option value="DSG">DSG</option>
+                    <option value="USG">USG</option>
+                    <option value="ASG">ASG</option>
+                  </optgroup>
                 </select>
                 <label for="grade">Grade</label>
               </div>
@@ -111,7 +120,7 @@
               </div>
             </div>
 
-            <!--TODO: Fix multiple selection of radio buttons  -->
+
             <div class="row">
               <div class="input-field col s12">
                 <p>Additional costs?</p>
@@ -142,7 +151,7 @@
 
             <button class="btn waves-effect waves-light green" type="submit" name="save">Submit</button>
             <button class="btn waves-effect waves-light green-text white" type="button" name="save">Save</button>
-            <span class="right"><button class="btn waves-effect waves-light green-text white" type="button" name="delete">Delete</button></span>
+            <span class="right"><button class="btn waves-effect waves-red grey-text white" type="button" name="delete">Delete</button></span>
           </form>
         </div>
       </div>

@@ -13,6 +13,12 @@
 
   </head>
   <body>
+
+    <!-- Dropdown structure -->
+    <ul id="login-dropdown" class="dropdown-content">
+      <li><a href="#login-modal">Login</a></li>
+      <li><a href="#register-modal">Register</a></li>
+    </ul>
     <!-- Navigation bar -->
     <nav>
       <div class="nav-wrapper purple">
@@ -21,16 +27,16 @@
 
         <ul class="right hide-on-med-and-down">
           <li><a href="booking.html">Travel Plan</a></li>
-          <li><a href="reporting.html">Reports</a></li>
-          <li><a href="register.html">Register</a></li>
+          <li><a href="reporting.html">Reports <span class="new badge green">3</span></a></li>
           <li><a href="dashboard.html">Status</a></li>
+          <li><a href="#!" class="dropdown-button" data-activates="login-dropdown">Log In <i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
 
         <!-- Mobile navigation bar -->
         <ul id="nav-mobile" class="side-nav">
           <li><a href="booking.html">Travel Plan</a></li>
-          <li><a href="reporting.html">Reports</a></li>
-          <li><a href="register.html">Register</a></li>
+          <li><a href="reporting.html">Reports<span class="new badge green">3</span></a></li>
+          <li><a href="login.html">Log In</a></li>
           <li><a href="dashboard.html">Status</a></li>
         </ul>
 
@@ -51,7 +57,7 @@
           </div>
         </div>
 
-        <div class="parallax"><img src="img/meeting.jpg" alt="meeting jpg"></div>
+        <div class="parallax"><img  src="img/meeting.jpg" alt="meeting jpg"></div>
       </div>
     </div>
 
@@ -84,6 +90,68 @@
           </div>
 
         </div>
+      </div>
+    </div>
+
+    <!-- Login Modals-->
+    <div class="modal" id="login-modal">
+      <div class="modal-content">
+        <h5 class="header purple-text text-lighten-3">Login</h5>
+        <div class="input-field">
+          <input type="text" name="login-username" validate>
+          <label for="login-username">Username</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" name="login-password" validate>
+          <label for="login-password">Password</label>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="modal-action modal-close btn-flat waves-red waves effect">Cancel</a>
+        <a href="#" class="modal-action modal-close btn-flat waves-green waves effect">Login</a>
+      </div>
+
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+      <div class="modal-content">
+        <h5 class="header purple-text text-lighten-3">Login</h5>
+
+        <div class="input-field">
+          <input type="text" name="register-fname" validate>
+          <label for="register-fname">First Name</label>
+        </div>
+
+        <div class="input-field">
+          <input type="text" name="register-sname" validate>
+          <label for="register-sname">Last Name</label>
+        </div>
+
+        <div class="input-field">
+          <input type="text" name="register-username" validate>
+          <label for="register-username">Username</label>
+        </div>
+
+        <div class="input-field">
+          <input type="email" name="register-email" validate>
+          <label for="register-email">Email Address</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" name="register-password" validate>
+          <label for="register-password">Password</label>
+        </div>
+
+        <p>By signing up, I agree to TravelBook's <a class="purple-text text-lighten-3" href="#">Terms &amp; Conditions.</a></p>
+
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-action modal-close btn-flat waves-red waves effect">Cancel</a>
+        <a href="#" class="modal-action modal-close btn-flat waves-green waves effect">Sign Up</a>
       </div>
     </div>
 
