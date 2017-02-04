@@ -25,6 +25,14 @@
 
         <!-- Mobile navigation bar -->
         <ul id="nav-mobile" class="side-nav">
+          <li><div class="userView">
+            <div class="background">
+              <img class="responsive-img" src="img/road.jpg">
+            </div>
+            <a href="#!user"><img class="circle" src="img/user.jpg"></a>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">johndoe@email.com</span></a>
+          </div></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="reporting.html">Reports<span class="new badge green">3</span></a></li>
           <li><a href="dashboard.html">Status</a></li>
@@ -37,8 +45,8 @@
       <div class="col s12">
         <ul class="tabs">
           <li class="tab col s4 "><a class="purple-text text-lighten-2" href=".booking-form">Create Travel Plan</a></li>
-          <li class="tab col s4" disabled><a class="purple-text text-lighten-4" href="#">Review Travel Plan</a></li>
-          <li class="tab col s4"><a class="purple-text text-lighten-4" href="#">Done!</a></li>
+          <li class="tab col s4 disabled"><a class="purple-text text-lighten-4" href="#">Review Travel Plan</a></li>
+          <li class="tab col s4 disabled"><a class="purple-text text-lighten-4" href="#">Done!</a></li>
         </ul>
       </div>
     </div>
@@ -49,6 +57,7 @@
         <div class="card-panel white">
           <form class="booking-form" action="#" method="post">
             <h5 class="header purple-text text-lighten-3">Create your Travel Plan</h5>
+
 <!-- Personal details -->
             <fieldset>
               <legend class="grey-text text-lighten-1">&nbsp;Personal Details&nbsp;</legend>
@@ -66,7 +75,7 @@
 <!-- TODO: Revise pay grades -->
               <div class="row">
                 <div class="input-field col s12">
-                  <select class="grade" name="grade" multiple>
+                  <select class="grade" name="grade">
                     <option value="" disabled selected>Choose your grade</option>
                     <optgroup label="Professionals">
                       <option value="P">P</option>
