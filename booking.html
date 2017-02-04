@@ -15,25 +15,33 @@
     <nav>
       <div class="nav-wrapper purple">
         <a href="index.html" class="brand-logo">TravelBook</a>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
 
         <ul class="right hide-on-med-and-down">
-          <li><a href="booking.html">Travel Plan</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="reporting.html">Reports<span class="new badge green">3</span></a></li>
-          <li><a href="register.html">Register</a></li>
           <li><a href="dashboard.html">Status</a></li>
         </ul>
 
         <!-- Mobile navigation bar -->
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="booking.html">Travel Plan</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="reporting.html">Reports<span class="new badge green">3</span></a></li>
-          <li><a href="register.html">Register</a></li>
           <li><a href="dashboard.html">Status</a></li>
         </ul>
 
       </div>
     </nav>
+
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s4 "><a class="purple-text text-lighten-2" href=".booking-form">Create Travel Plan</a></li>
+          <li class="tab col s4" disabled><a class="purple-text text-lighten-4" href="#">Review Travel Plan</a></li>
+          <li class="tab col s4"><a class="purple-text text-lighten-4" href="#">Done!</a></li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Form -->
     <div class="row">
@@ -41,116 +49,190 @@
         <div class="card-panel white">
           <form class="booking-form" action="#" method="post">
             <h5 class="header purple-text text-lighten-3">Create your Travel Plan</h5>
-            <div class="row">
-              <div class="input-field col s6">
-                <input type="text" name="fname" class="validate">
-                <label for="fname">First Name</label>
+<!-- Personal details -->
+            <fieldset>
+              <legend class="grey-text text-lighten-1">&nbsp;Personal Details&nbsp;</legend>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input type="text" name="fname" class="validate">
+                  <label for="fname">First Name</label>
+                </div>
+
+                <div class="input-field col s6">
+                  <input type="text" name="sname" class="validate"><br>
+                  <label for="sname">Last Name</label>
+                </div>
               </div>
-
-              <div class="input-field col s6">
-                <input type="text" name="sname" class="validate"><br>
-                <label for="sname">Last Name</label>
+<!-- TODO: Revise pay grades -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <select class="grade" name="grade" multiple>
+                    <option value="" disabled selected>Choose your grade</option>
+                    <optgroup label="Professionals">
+                      <option value="P">P</option>
+                      <option value="D">D</option>
+                    </optgroup>
+                    <optgroup label="General Service">
+                      <option value="G">G</option>
+                      <option value="TC">TC</option>
+                      <option value="S">S</option>
+                      <option value="PIA">PIA</option>
+                      <option value="LT">LT</option>
+                    </optgroup>
+                    <optgroup label="National Professional Officers">
+                      <option value="NO">NO</option>
+                    </optgroup>
+                    <optgroup label="Field Service">
+                      <option value="FS">FS</option>
+                    </optgroup>
+                    <optgroup label="Senior Appointments">
+                      <option value="SG">SG</option>
+                      <option value="DSG">DSG</option>
+                      <option value="USG">USG</option>
+                      <option value="ASG">ASG</option>
+                    </optgroup>
+                  </select>
+                  <label for="grade">Grade</label>
+                </div>
               </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s12">
-                <select class="grade" name="grade" multiple>
-                  <option value="" disabled selected>Choose your grade</option>
-                  <optgroup label="Professionals">
-                    <option value="P">P</option>
-                    <option value="D">D</option>
-                  </optgroup>
-                  <optgroup label="General Service">
-                    <option value="G">G</option>
-                    <option value="TC">TC</option>
-                    <option value="S">S</option>
-                    <option value="PIA">PIA</option>
-                    <option value="LT">LT</option>
-                  </optgroup>
-                  <optgroup label="National Professional Officers">
-                    <option value="NO">NO</option>
-                  </optgroup>
-                  <optgroup label="Field Service">
-                    <option value="FS">FS</option>
-                  </optgroup>
-                  <optgroup label="Senior Appointments">
-                    <option value="SG">SG</option>
-                    <option value="DSG">DSG</option>
-                    <option value="USG">USG</option>
-                    <option value="ASG">ASG</option>
-                  </optgroup>
-                </select>
-                <label for="grade">Grade</label>
-              </div>
-            </div>
+            </fieldset>
 
 
-            <div class="row">
-              <div class="input-field col s6">
-                <input type="text" name="meeting">
-                <label for="meeting">Meeting/Institution</label>
-              </div>
-
-              <div class="input-field col s6">
-                <label for="venue">Venue</label>
-                <input type="text" name="venue">
-              </div>
-            </div>
-
+<!-- All travel information goes here -->
             <br>
+            <fieldset>
+              <legend class="grey-text text-lighten-1">&nbsp;Travel Information&nbsp;</legend>
+              <div class="row">
+                <div class="input-field col s4">
+                  <input type="text" name="project-name">
+                  <label for="project-name">Project</label>
+                </div>
 
-            <!-- Need to compensate for Mission, Travel days & leave days -->
-            <div class="row">
-              <div class="input-field col s6">
-                <input type="date" name="date-start" class="datepicker">
-                <label for="date-start">Date Start</label>
+                <div class="input-field col s4">
+                  <input type="text" name="department">
+                  <label for="department">Department</label>
+                </div>
+
+                <div class="input-field col s4">
+                  <select class="quarter" name="quarter">
+                    <option value="1">Q1</option>
+                    <option value="2">Q2</option>
+                    <option value="3">Q3</option>
+                    <option value="4">Q4</option>
+                  </select>
+                  <label for="quarter">Applicable Quarter</label>
+                </div>
               </div>
 
-              <div class="input-field col s6">
-                <input type="date" name="date-end" class="datepicker">
-                <label for="date-end">Date End</label>
-              </div>
-            </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input type="text" name="meeting">
+                  <label for="meeting">Meeting/Institution</label>
+                </div>
 
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="justification" class="materialize-textarea"></textarea>
-                <label for="justification">Justification:</label>
-              </div>
-            </div>
-
-
-            <div class="row">
-              <div class="input-field col s12">
-                <p>Additional costs?</p>
-                <p>
-                  <input class="with-gap" group="cost-group" name="cost-option" type="radio" id="add-costs-option">
-                  <label for="add-costs-option">Yes</label>
-
-                  <input class="with-gap" group="cost-group" name="cost-option" type="radio" id="no-costs-option">
-                  <label for="no-costs-option">No</label>
-                </p>
-              </div>
-            </div>
-            <!-- On checked, create additional input with name & est travel cost  -->
-
-
-            <div class="row">
-              <div class="input-field col s6">
-                <input type="text" name="project-name">
-                <label for="project-name">Project</label>
+                <div class="input-field col s6">
+                  <label for="venue">Venue</label>
+                  <input type="text" name="venue">
+                </div>
               </div>
 
-              <div class="input-field col s6">
-                <input type="text" name="department">
-                <label for="department">Department</label>
+              <br>
+
+              <!-- Need to compensate for Mission, Travel days & leave days -->
+              <div class="row">
+                <div class="input-field col s6">
+                  <input type="date" name="date-start" class="datepicker">
+                  <label for="date-start">Date Start</label>
+                </div>
+
+                <div class="input-field col s6">
+                  <input type="date" name="date-end" class="datepicker">
+                  <label for="date-end">Date End</label>
+                </div>
               </div>
-            </div>
+
+              <div class="row">
+                <div class="input-field col s6">
+                  <select class="regional-office" name="regional-office">
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Kisumu">Kisumu</option>
+                    <option value="Mombasa">Mombasa</option>
+                    <option value="Nakuru">Nakuru</option>
+                    <option value="Machakos">Machakos</option>
+                    <option value="Marsabit">Marsabit</option>
+                  </select>
+                  <label for="regional-office">Regional Office</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="justification" class="materialize-textarea"></textarea>
+                  <label for="justification">Justification:</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="comm-support" class="materialize-textarea"></textarea>
+                  <label for="comm-support">Communication support required</label>
+                </div>
+              </div>
+            </fieldset>
+
+<!-- All the finance information here -->
+              <br>
+              <fieldset>
+                <legend class="grey-text text-lighten-1">&nbsp;Finances&nbsp;</legend>
+                <div class="row">
+                  <div class="input-field col s6">
+                    <p>Additional costs?</p>
+                    <p>
+                      <input class="with-gap" group="cost-group" name="cost-option" type="radio" id="add-costs-option">
+                      <label for="add-costs-option">Yes</label>
+
+                      <input class="with-gap" group="cost-group" name="cost-option" type="radio" id="no-costs-option">
+                      <label for="no-costs-option">No</label>
+                    </p>
+                  </div>
+                  <!-- TODO: when yes radio selected, enable textarea -->
+                  <div class="input-field col s6">
+                    <textarea id="added-costs" class="materialize-textarea" disabled></textarea>
+                    <label for="added-costs">If yes, list reasons &amp; related expenses</label>
+                  </div>
+                </div>
 
 
-            <button class="btn waves-effect waves-light green" type="submit" name="save">Submit</button>
-            <button class="btn waves-effect waves-light green-text white" type="button" name="save">Save</button>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input type="text" name="budget">
+                  <label for="budget">Budget Line</label>
+                </div>
+
+                <div class="input-field col s6">
+                  <input type="text" name="estimate">
+                  <label for="estimate">Estimated cost</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s6">
+                  <input type="text" name="total-budget">
+                  <label for="total-budget">Total Allocated Travel Budget</label>
+                </div>
+
+                <div class="col s6">
+                  Travel Budget Balance as of <span class="purple-text text-lighten-2" id="current-date">04/02/2017</span>:
+                  <div class="input-field inline">
+                    <input type="text" name="budget-balance">
+                    <label for="budget-balance"></label>
+                  </div>
+                </div>
+              </div>
+              </fieldset>
+
+              <br>
+            <button class="btn waves-effect waves-green green-text white" type="button" name="save">Save</button>
             <span class="right"><button class="btn waves-effect waves-red grey-text white" type="button" name="delete">Delete</button></span>
           </form>
         </div>

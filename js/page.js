@@ -27,5 +27,8 @@ $(document).ready(function(){
 
   // Enabling modals
   $('.modal').modal();
-  
+
+  // Enabling tabs
+  $('ul.tabs').tabs();
+
 });
