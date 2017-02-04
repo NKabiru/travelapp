@@ -3,9 +3,13 @@
   color: green !important;
 }
 
-.brand-logo{
-  text-indent: 2em;
+/*Indent only on desktop*/
+@media only screen and (min-width: 992px) {
+  .brand-logo{
+    text-indent: 2em ;
+  }
 }
+
 
 /* tab focus color */
 .tabs .indicator {
