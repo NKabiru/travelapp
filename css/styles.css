@@ -18,7 +18,7 @@
 
 /* label focus color */
 .input-field input[type=text]:focus + label{
-     color: #00c853 !important;
+     color: grey !important;
    }
 
 /* label focus color */
@@ -29,7 +29,7 @@
 
 /* textarea focus color */
 .input-field textarea:focus + label{
-  color: #00c853 !important;
+  color: grey !important;
 }
 
 /* textarea focus color */
