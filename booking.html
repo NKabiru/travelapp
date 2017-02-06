@@ -65,19 +65,19 @@
               <legend class="grey-text text-lighten-1">&nbsp;Personal Details&nbsp;</legend>
               <div class="row">
                 <div class="input-field col s6">
-                  <input type="text" name="fname" class="validate">
-                  <label for="fname">First Name</label>
+                  <input type="text" name="fname" class="validate" required>
+                  <label for="fname" data-error="Please fill in this field">First Name</label>
                 </div>
 
                 <div class="input-field col s6">
-                  <input type="text" name="sname" class="validate"><br>
-                  <label for="sname">Last Name</label>
+                  <input type="text" name="sname" class="validate" required><br>
+                  <label for="sname" data-error="Please fill in this field">Last Name</label>
                 </div>
               </div>
 <!-- TODO: Revise pay grades -->
               <div class="row">
                 <div class="input-field col s12">
-                  <select class="grade" name="grade">
+                  <select class="grade" name="grade" required>
                     <option value="" disabled selected>Choose your grade</option>
                     <optgroup label="Professionals">
                       <option value="P">P</option>
@@ -103,7 +103,7 @@
                       <option value="ASG">ASG</option>
                     </optgroup>
                   </select>
-                  <label for="grade">Grade</label>
+                  <label for="grade" data-error="Please choose an option">Grade</label>
                 </div>
               </div>
             </fieldset>
@@ -115,35 +115,35 @@
               <legend class="grey-text text-lighten-1">&nbsp;Travel Information&nbsp;</legend>
               <div class="row">
                 <div class="input-field col s4">
-                  <input type="text" name="project-name">
-                  <label for="project-name">Project</label>
+                  <input type="text" name="project-name" required>
+                  <label for="project-name" data-error="Please fill in this field">Project</label>
                 </div>
 
                 <div class="input-field col s4">
-                  <input type="text" name="department">
-                  <label for="department">Department</label>
+                  <input type="text" name="department" required>
+                  <label for="department" data-error="Please fill in this field">Department</label>
                 </div>
 
                 <div class="input-field col s4">
-                  <select class="quarter" name="quarter">
+                  <select class="quarter" name="quarter" required>
                     <option value="1">Q1</option>
                     <option value="2">Q2</option>
                     <option value="3">Q3</option>
                     <option value="4">Q4</option>
                   </select>
-                  <label for="quarter">Applicable Quarter</label>
+                  <label for="quarter" data-error="Please select a quarter">Applicable Quarter</label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s6">
-                  <input type="text" name="meeting">
-                  <label for="meeting">Meeting/Institution</label>
+                  <input type="text" name="meeting" required>
+                  <label for="meeting" data-error="Please fill in this field">Meeting/Institution</label>
                 </div>
 
                 <div class="input-field col s6">
-                  <label for="venue">Venue</label>
-                  <input type="text" name="venue">
+                  <label for="venue" data-error="Please fill in this field">Venue</label>
+                  <input type="text" name="venue" required>
                 </div>
               </div>
 
@@ -152,19 +152,19 @@
               <!-- Need to compensate for Mission, Travel days & leave days -->
               <div class="row">
                 <div class="input-field col s6">
-                  <input type="date" name="date-start" class="datepicker">
+                  <input type="date" name="date-start" class="datepicker" required>
                   <label for="date-start">Date Start</label>
                 </div>
 
                 <div class="input-field col s6">
-                  <input type="date" name="date-end" class="datepicker">
-                  <label for="date-end">Date End</label>
+                  <input type="date" name="date-end" class="datepicker" required>
+                  <label for="date-end" data-error="Please put a date">Date End</label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s6">
-                  <select class="regional-office" name="regional-office">
+                  <select class="regional-office" name="regional-office" required>
                     <option value="Nairobi">Nairobi</option>
                     <option value="Kisumu">Kisumu</option>
                     <option value="Mombasa">Mombasa</option>
@@ -172,7 +172,7 @@
                     <option value="Machakos">Machakos</option>
                     <option value="Marsabit">Marsabit</option>
                   </select>
-                  <label for="regional-office">Regional Office</label>
+                  <label for="regional-office" data-error="Please fill in this field">Regional Office</label>
                 </div>
               </div>
 
@@ -199,10 +199,10 @@
                   <div class="input-field col s6">
                     <p>Additional costs?</p>
                     <p>
-                      <input class="with-gap" group="cost-group" name="cost-option" type="radio" id="add-costs-option">
+                      <input class="with-gap" group="cost-group" name="cost-option" value="yes" type="radio" id="add-costs-option">
                       <label for="add-costs-option">Yes</label>
 
-                      <input class="with-gap" group="cost-group" name="cost-option" type="radio" id="no-costs-option">
+                      <input class="with-gap" group="cost-group" name="cost-option" value="no" type="radio" id="no-costs-option">
                       <label for="no-costs-option">No</label>
                     </p>
                   </div>
@@ -216,33 +216,33 @@
 
               <div class="row">
                 <div class="input-field col s6">
-                  <input type="text" name="budget">
-                  <label for="budget">Budget Line</label>
+                  <input type="number" name="budget" required>
+                  <label for="budget" data-error="Please fill in this field">Budget Line</label>
                 </div>
 
                 <div class="input-field col s6">
-                  <input type="text" name="estimate">
-                  <label for="estimate">Estimated cost</label>
+                  <input type="number" name="estimate" required>
+                  <label for="estimate" data-error="Please fill in this field">Estimated cost</label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s6">
-                  <input type="text" name="total-budget">
-                  <label for="total-budget">Total Allocated Travel Budget</label>
+                  <input type="number" name="total-budget" required>
+                  <label for="total-budget" data-error="Please fill in this field">Total Allocated Travel Budget</label>
                 </div>
 
                 <div class="col s6">
                   <div class="input-field inline">
-                    <input type="text" name="budget-balance">
-                    <label for="budget-balance">Budget Balance</label>
+                    <input type="number" name="budget-balance" required>
+                    <label for="budget-balance" data-error="Please fill in this field">Budget Balance</label>
                   </div>
                 </div>
               </div>
               </fieldset>
 
               <br>
-            <button class="btn waves-effect waves-green green-text white" type="button" name="save">Save</button>
+            <button class="btn waves-effect waves-green green-text white" type="submit" name="save">Save</button>
             <span class="right"><button class="btn waves-effect waves-red grey-text white" type="button" name="delete">Delete</button></span>
           </form>
         </div>
@@ -252,9 +252,10 @@
 </div>
 
     <!-- Scripts -->
-    <script src="js\jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/page.js"></script>
+    <script src="js/booking.js"></script>
 
   </body>
 </html>
