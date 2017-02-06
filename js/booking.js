@@ -1,3 +1,4 @@
+
 // Variables
 var radioAddCostOption = document.getElementById('add-costs-option');
 var radioNoCostOption = document.getElementById('no-costs-option');
